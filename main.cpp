@@ -52,5 +52,34 @@ int main(int argc, char** argv) {
 	h = 0;
 	flag = 0;
 
+		int arr_per[n+m];
+
+		for(int i = 0;i < n;i++){
+			for(int j = 0; j < m; j++){
+				if(arr1[i] == arr2[j]){
+					flag = 1;
+				}
+			}
+			
+			if(flag == 1){
+			h++;
+			arr_per[h] = arr1[i];
+			}
+			flag = 0;
+		}
+		
+				cout <<"\n\nПересечение: ";
+		for(int i = 1; i < h+1; i++){
+       	   	  cout << arr_per[i];
+			  cout << " ";
+	        }
+	
+	
+	h = 0;
+	flag = 0;
+	
+
+
+
 	return 0;
 }
